@@ -1,10 +1,7 @@
-
 from password_checker import password_is_valid
 from password_checker import password_is_ok
 import pytest
 
-
-#password_is_valid tests
 def test_password_exists():
 	with pytest.raises(Exception, match = "password should exist"):
 		password_is_valid("")
@@ -25,7 +22,6 @@ def test_password_has_digit():
 	with pytest.raises(Exception, match = "password should contain a digit"):
 		password_is_valid("Joymasemola")
 
-#password_is_ok tests
 def test_password_is_ok():
 	assert password_is_ok("Jo13") == False
 	assert password_is_ok("J") == False
