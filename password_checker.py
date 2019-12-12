@@ -1,9 +1,7 @@
 import re
 
-
 # Defining  the function for the password
 password = 'Joyous@1234'
-
 def password_is_valid(password):
     if len(password) == 0:
         raise Exception("password should exist")
@@ -27,7 +25,6 @@ def password_is_valid(password):
 password_is_valid(password)
 
 def password_is_ok(password):
-   print(password + ' is the password ')
    try:
         password_is_valid(password)
    except Exception as exceptions:
@@ -37,6 +34,6 @@ def password_is_ok(password):
             return False
         if len(exceptions) <= 2: return True
    else:
-        return True
-
+        return True   
+password_is_ok(password)
                       
